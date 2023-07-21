@@ -1,15 +1,26 @@
 package com.example.activitylifecycle19052023
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.Log
+import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
+
+    private var btnNavigateSecondScreen: Button? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         Log.d("BBB", "onCreate")
+
+
+        btnNavigateSecondScreen = findViewById(R.id.button_navigate_second_screen)
+        btnNavigateSecondScreen?.setOnClickListener {
+            val intent = Intent(this@MainActivity, SecondActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onStart() {
