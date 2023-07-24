@@ -1,14 +1,25 @@
 package com.example.activitylifecycle19052023
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 
 class ThirdActivity : AppCompatActivity() {
+
+    private var btnNavigateMainScreen: Button? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_third)
         Log.d("BBB", "ThirdActivity: onCreate")
+
+        btnNavigateMainScreen = findViewById(R.id.button_navigate_main_screen)
+        btnNavigateMainScreen?.setOnClickListener {
+            val intent = Intent(this@ThirdActivity, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onStart() {
