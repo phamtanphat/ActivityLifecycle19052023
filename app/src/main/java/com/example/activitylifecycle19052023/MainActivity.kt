@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Log.d("BBB", "onCreate")
+        Log.d("BBB", "MainActivity: onCreate")
 
 
         btnNavigateSecondScreen = findViewById(R.id.button_navigate_second_screen)
@@ -25,31 +25,31 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        Log.d("BBB", "onStart")
+        Log.d("BBB", "MainActivity: onStart")
     }
 
     override fun onResume() {
         super.onResume()
-        Log.d("BBB", "onResume")
+        Log.d("BBB", "MainActivity: onResume")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.d("BBB", "onPause")
+        Log.d("BBB", "MainActivity: onPause")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.d("BBB", "onStop")
+        Log.d("BBB", "MainActivity: onStop")
     }
 
     override fun onRestart() {
         super.onRestart()
-        Log.d("BBB", "onRestart")
+        Log.d("BBB", "MainActivity: onRestart")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.d("BBB", "onDestroy")
+        Log.d("BBB", "MainActivity: onDestroy")
     }
 }
