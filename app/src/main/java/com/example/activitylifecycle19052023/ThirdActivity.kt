@@ -9,6 +9,7 @@ import android.widget.Button
 class ThirdActivity : AppCompatActivity() {
 
     private var btnNavigateMainScreen: Button? = null
+    private var btnNavigateThirdScreen: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,8 +17,15 @@ class ThirdActivity : AppCompatActivity() {
         Log.d("BBB", "ThirdActivity: onCreate")
 
         btnNavigateMainScreen = findViewById(R.id.button_navigate_main_screen)
+        btnNavigateThirdScreen = findViewById(R.id.button_navigate_third_screen)
+
         btnNavigateMainScreen?.setOnClickListener {
             val intent = Intent(this@ThirdActivity, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnNavigateThirdScreen?.setOnClickListener {
+            val intent = Intent(this@ThirdActivity, ThirdActivity::class.java)
             startActivity(intent)
         }
     }
